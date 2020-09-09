@@ -1,0 +1,59 @@
+{
+  "name": "@metarhia/iterator",
+  "version": "1.0.0",
+  "description": "Efficient and composable iteration",
+  "license": "MIT",
+  "keywords": [
+    "iterator",
+    "iteratorator",
+    "composable"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metarhia/iterator"
+  },
+  "main": "iterator.js",
+  "exports": {
+    ".": {
+      "require": "./iterator.js",
+      "import": "./iterator.mjs"
+    }
+  },
+  "browser": {
+    "iterator.js": "./dist/iterator.js"
+  },
+  "readmeFilename": "README.md",
+  "files": [
+    "iterator.mjs",
+    "lib/",
+    "dist/"
+  ],
+  "scripts": {
+    "test": "npm run -s lint && metatests --exclude test/fixtures -- test",
+    "lint": "eslint --ignore-path .gitignore . && prettier --ignore-path .gitignore -c \"**/*.{js,mjs,json,md,rc,yml}\"",
+    "fmt": "prettier --ignore-path .gitignore --write \"**/*.{js,mjs,json,md,rc,yml}\"",
+    "fix": "npm run -s fmt && eslint --ignore-path .gitignore --fix .",
+    "doc": "metadoc",
+    "build": "babel iterator.js -d dist && babel lib -d dist/lib",
+    "prepublish": "npm run -s build"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "@metarhia/doc": "^0.7.0",
+    "eslint": "^6.8.0",
+    "eslint-config-metarhia": "^7.0.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "metatests": "^0.7.2",
+    "prettier": "1.19.x"
+  }
+}

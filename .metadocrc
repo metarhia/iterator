@@ -1,0 +1,8 @@
+{
+  "headerFile": "doc/header.md",
+  "footerFile": "doc/footer.md",
+  "minHeaderLevel": 2,
+  "removeInterface": true,
+  "files": ["iterator.js"],
+  "outputFile": "README.md"
+}
