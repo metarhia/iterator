@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased][unreleased]
+## [unreleased][unreleased]
 
-[unreleased]: https://github.com/metarhia/common/compare/v0.1.0...HEAD
+## [1.0.0-alpha1][1.0.0-alpha1]
+
+Initial alpha release.
+
+[unreleased]: https://github.com/metarhia/iterator/compare/v1.0.0-alpha1...HEAD
+[1.0.0-alpha1]: https://github.com/metarhia/iterator/compare/46b3b1356729ce594bd1ffa98627a31f1af84d93...v1.0.0-alpha1
