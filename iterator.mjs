@@ -1,4 +1,4 @@
-import iter from './iter.js';
+import iter from './iterator.js';
 
 export default iter;
 
