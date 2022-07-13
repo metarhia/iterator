@@ -22,16 +22,19 @@
   "browser": {
     "iterator.js": "./dist/iterator.js"
   },
+  "types": "./types/index.d.ts",
   "readmeFilename": "README.md",
   "files": [
     "iterator.js",
     "iterator.mjs",
     "lib/",
+    "types/",
     "dist/"
   ],
   "scripts": {
-    "test": "npm run -s lint && metatests --exclude test/fixtures -- test",
+    "test": "npm run -s lint && metatests --exclude test/fixtures -- test && npm run -s types",
     "lint": "eslint --ignore-path .gitignore . && prettier --ignore-path .gitignore -c \"**/*.{js,mjs,json,md,rc,yml}\"",
+    "types": "tsc -p types/tsconfig.json",
     "fmt": "prettier --ignore-path .gitignore --write \"**/*.{js,mjs,json,md,rc,yml}\"",
     "fix": "npm run -s fmt && eslint --ignore-path .gitignore --fix .",
     "doc": "metadoc",
@@ -48,13 +51,16 @@
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@metarhia/doc": "^0.7.0",
-    "eslint": "^8.5.0",
-    "eslint-config-metarhia": "^7.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.16.0",
+    "eslint-config-metarhia": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
     "metatests": "^0.7.2",
-    "prettier": "2.5.x"
+    "prettier": "2.5.x",
+    "typescript": "^4.7.4"
   }
 }
