@@ -1,11 +1,11 @@
-import iter from './iterator.js';
+import iterator from './iterator.js';
 
-export default iter;
+export default iterator;
 
-export const Iterator = iter.Iterator;
-export const iter = iter.iter;
-export const iterEntries = iter.iterEntries;
-export const iterKeys = iter.iterKeys;
-export const iterValues = iter.iterValues;
-export const AsyncIterator = iter.AsyncIterator;
-export const asyncIter = iter.asyncIter;
+export const Iterator = iterator.Iterator;
+export const iter = iterator.iter;
+export const iterEntries = iterator.iterEntries;
+export const iterKeys = iterator.iterKeys;
+export const iterValues = iterator.iterValues;
+export const AsyncIterator = iterator.AsyncIterator;
+export const asyncIter = iterator.asyncIter;
